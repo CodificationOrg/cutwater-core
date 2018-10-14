@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TZUtils | cutwater-core</title>
+	<title>TZUtils | CutWater: Core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">cutwater-core</a>
+					<a href="../index.html" class="title">CutWater: Core</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,13 +53,10 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_time_tzutils_.html">&quot;Time/TZUtils&quot;</a>
-				</li>
-				<li>
-					<a href="_time_tzutils_.tzutils.html">TZUtils</a>
+					<a href="tzutils.html">TZUtils</a>
 				</li>
 			</ul>
 			<h1>Class TZUtils</h1>
@@ -84,22 +81,22 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#default_offset" class="tsd-kind-icon">DEFAULT_<wbr>OFFSET</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#env_offset" class="tsd-kind-icon">ENV_<wbr>OFFSET</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#format_timestamp" class="tsd-kind-icon">FORMAT_<wbr>TIMESTAMP</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#default_offset" class="tsd-kind-icon">DEFAULT_<wbr>OFFSET</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#env_offset" class="tsd-kind-icon">ENV_<wbr>OFFSET</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#format_timestamp" class="tsd-kind-icon">FORMAT_<wbr>TIMESTAMP</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#now" class="tsd-kind-icon">now</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#timezoneoffset" class="tsd-kind-icon">timezone<wbr>Offset</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#now" class="tsd-kind-icon">now</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#timezoneoffset" class="tsd-kind-icon">timezone<wbr>Offset</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_time_tzutils_.tzutils.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="tzutils.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,32 +107,59 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_offset" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>OFFSET</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>OFFSET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>OFFSET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L9">Time/TZUtils.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L19">Time/TZUtils.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default timezone offset if <code>UTC_OFFSET</code> is not set in <a href="config.html">Config</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="env_offset" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> ENV_<wbr>OFFSET</h3>
-					<div class="tsd-signature tsd-kind-icon">ENV_<wbr>OFFSET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"UTC_OFFSET"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;UTC_OFFSET&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ENV_<wbr>OFFSET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;UTC_OFFSET&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L7">Time/TZUtils.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L12">Time/TZUtils.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of value read from <a href="config.html">Config</a> to determine initial timezone if present.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="format_timestamp" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> FORMAT_<wbr>TIMESTAMP</h3>
-					<div class="tsd-signature tsd-kind-icon">FORMAT_<wbr>TIMESTAMP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"YYYY-MM-DD HH:mm:ss,SSS"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;YYYY-MM-DD HH:mm:ss,SSS&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">FORMAT_<wbr>TIMESTAMP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;YYYY-MM-DD HH:mm:ss,SSS&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L11">Time/TZUtils.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L26">Time/TZUtils.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default format used when calling <a href="tzutils.html#timestamp">TZUtils.timestamp</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -144,16 +168,25 @@
 					<a name="now" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> now</h3>
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> now<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> now<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L25">Time/TZUtils.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L56">Time/TZUtils.ts:56</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A <code>Date</code> object representing the date/time at the current <a href="tzutils.html#timezoneoffset">TZUtils.timezoneOffset</a>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>readonly</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -168,17 +201,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L17">Time/TZUtils.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L35">Time/TZUtils.ts:35</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The current offset in minutes from UTC. May be positive or negative.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L13">Time/TZUtils.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L31">Time/TZUtils.ts:31</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The current offset in minutes from UTC. May be positive or negative.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -202,13 +245,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/33a7be8/src/Time/TZUtils.ts#L21">Time/TZUtils.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Time/TZUtils.ts#L47">Time/TZUtils.ts:47</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current timestamp as a string. The actual value depends on both the <a href="tzutils.html#timezoneoffset">TZUtils.timezoneOffset</a> and the optionally provided format.</p>
+								</div>
+								<ul>
+									<li>Please see the <a href="https://date-fns.org/v1.29.0/docs/format">date-fns project</a> for details about the valid values for the format string.</li>
+								</ul>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> format: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;this.FORMAT_TIMESTAMP</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The optional <a href="https://date-fns.org/v1.29.0/docs/format">date-fns style</a> format for the output.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -221,96 +275,102 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_config_.html">"<wbr>Config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_env_.html">"<wbr>Env"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_http_httputils_.html">"<wbr>Http/<wbr>Http<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_http_index_.html">"<wbr>Http/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_appender_.html">"<wbr>Logging/<wbr>Appender"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_consoleappender_.html">"<wbr>Logging/<wbr>Console<wbr>Appender"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_layout_.html">"<wbr>Logging/<wbr>Layout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_level_.html">"<wbr>Logging/<wbr>Level"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_logger_.html">"<wbr>Logging/<wbr>Logger"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_loggerfactory_.html">"<wbr>Logging/<wbr>Logger<wbr>Factory"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_loggingevent_.html">"<wbr>Logging/<wbr>Logging<wbr>Event"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_simplelayout_.html">"<wbr>Logging/<wbr>Simple<wbr>Layout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_logging_index_.html">"<wbr>Logging/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_observerutils_.html">"<wbr>Observer<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_stringutils_.html">"<wbr>String<wbr>Utils"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_time_tzutils_.html">"<wbr>Time/TZUtils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_time_timeunit_.html">"<wbr>Time/<wbr>Time<wbr>Unit"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_time_index_.html">"<wbr>Time/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="config.html" class="tsd-kind-icon">Config</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="env.html" class="tsd-kind-icon">Env</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="level.html" class="tsd-kind-icon">Level</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="loggerfactory.html" class="tsd-kind-icon">Logger<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="loggingevent.html" class="tsd-kind-icon">Logging<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="observerutils.html" class="tsd-kind-icon">Observer<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="simplelayout.html" class="tsd-kind-icon">Simple<wbr>Layout</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_time_tzutils_.tzutils.html" class="tsd-kind-icon">TZUtils</a>
+					<li class="current tsd-kind-class">
+						<a href="tzutils.html" class="tsd-kind-icon">TZUtils</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#default_offset" class="tsd-kind-icon">DEFAULT_<wbr>OFFSET</a>
+								<a href="tzutils.html#default_offset" class="tsd-kind-icon">DEFAULT_<wbr>OFFSET</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#env_offset" class="tsd-kind-icon">ENV_<wbr>OFFSET</a>
+								<a href="tzutils.html#env_offset" class="tsd-kind-icon">ENV_<wbr>OFFSET</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#format_timestamp" class="tsd-kind-icon">FORMAT_<wbr>TIMESTAMP</a>
+								<a href="tzutils.html#format_timestamp" class="tsd-kind-icon">FORMAT_<wbr>TIMESTAMP</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#now" class="tsd-kind-icon">now</a>
+								<a href="tzutils.html#now" class="tsd-kind-icon">now</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#timezoneoffset" class="tsd-kind-icon">timezone<wbr>Offset</a>
+								<a href="tzutils.html#timezoneoffset" class="tsd-kind-icon">timezone<wbr>Offset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_time_tzutils_.tzutils.html#timestamp" class="tsd-kind-icon">timestamp</a>
+								<a href="tzutils.html#timestamp" class="tsd-kind-icon">timestamp</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="timeunit.html" class="tsd-kind-icon">Time<wbr>Unit</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/appender.html" class="tsd-kind-icon">Appender</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/layout.html" class="tsd-kind-icon">Layout</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#contains" class="tsd-kind-icon">contains</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

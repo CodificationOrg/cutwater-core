@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>cutwater-core</title>
+	<title>CutWater: Core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">cutwater-core</a>
+					<a href="index.html" class="title">CutWater: Core</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,229 +53,413 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="index.html">Globals</a>
 				</li>
 			</ul>
-			<h1> cutwater-core</h1>
+			<h1> CutWater: Core</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h1 id="cutwater-core">Cutwater Core</h1>
-				<p><a href="https://circleci.com/gh/CodificationOrg/cutwater-core"><img src="https://img.shields.io/circleci/project/github/CodificationOrg/cutwater-core.svg" alt="CircleCI"></a>
-				<a href="https://www.npmjs.com/package/cutwater-core"><img src="https://img.shields.io/npm/v/cutwater-core.svg" alt="NPM"></a></p>
-				<p>A library providing the functionality that we always seem to need in every project Typescript/Javascript project.</p>
-				<h2 id="installation">Installation</h2>
-				<p>Via npm:</p>
-				<pre><code>npm <span class="hljs-keyword">install</span> cutwater-core</code></pre><p>Via yarn:</p>
-				<pre><code>yarn <span class="hljs-keyword">add</span><span class="bash"> cutwater-core</span></code></pre><h2 id="api">API</h2>
-				<h3 id="configuration">Configuration</h3>
-				<p>Basic usage:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Config } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
-
-<span class="hljs-keyword">const</span> url = Config.get(<span class="hljs-string">'API_URL'</span>, <span class="hljs-string">'https://api.example.com'</span>);
-<span class="hljs-comment">// Returns 'https://api.example.com' if there is no value for API_URL</span>
-
-<span class="hljs-keyword">const</span> otherUrl = Config.getRequired(<span class="hljs-string">'API_URL'</span>, <span class="hljs-string">'API_URL is required!'</span>);
-<span class="hljs-comment">// Will throw an error (optionally with the provided message) if API_URL does not exist</span>
-
-Config.put(<span class="hljs-string">'BACKUP_API_URL'</span>, <span class="hljs-string">'https://api-backup.example.com'</span>);</code></pre>
-				<h4 id="config"><code>Config</code></h4>
-				<h5 id="methods">METHODS</h5>
-				<ul>
-					<li><code>put(key: string, value: string): void</code> - This will set the provided configuration <code>key</code> to the specified <code>value</code>. This does not make any changes to <code>process.env</code>, the key/value pair is stored in memory only.</li>
-					<li><code>get(key: string, defaultValue?: string): string</code> - Returns the value associated with the <code>key</code>, checking first for values provided by the <code>put</code> method and then from <code>process.env</code>. If the value is not found, the <code>defaultValue</code> is returned, or an empty string if that is not provided.</li>
-					<li><code>getRequired(key: string, errorMsg?: string): string</code> - Returns the value associated with the <code>key</code>, checking first for values provided by the <code>put</code> method and then from <code>process.env</code>. Unlike the <code>get</code> method, an error is thrown if the value is not found, using the message specified if provided.</li>
-				</ul>
-				<hr>
-				<h3 id="environment">Environment</h3>
-				<p>Basic usage:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Env } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
-
-<span class="hljs-keyword">if</span> (Env.isProd()) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Yeah, we made it to production!'</span>);
-}
-<span class="hljs-keyword">if</span> (Env.isDev()) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'No yet I guess.'</span>);
-}</code></pre>
-				<h4 id="env"><code>Env</code></h4>
-				<h5 id="methods">METHODS</h5>
-				<ul>
-					<li><code>isProd(): boolean</code> - Returns <code>true</code> if the <code>STAGE</code> value in <code>Config</code> indicates a production environment.</li>
-					<li><code>isDev(): boolean</code> - Returns <code>true</code> if the <code>STAGE</code> value in <code>Config</code> does not indicate a production environment. In other words: <code>!Env.isProd()</code>.</li>
-				</ul>
-				<h5 id="properties">PROPERTIES</h5>
-				<ul>
-					<li><code>ENV_STAGE</code> - <em>(readonly)</em> Name of the <code>Config</code> variable expected to contain the name of the environment. [STAGE]</li>
-					<li><code>DEFAULT_PROD_STAGE</code> - <em>(readonly)</em> Default value for the <code>STAGE</code> variable in <code>Config</code> to indicate a production environment. [prod]</li>
-					<li><code>ENV_PROD_STAGE</code>- <em>(readonly)</em> Name of the <code>Config</code> variable expected to contain an override of the default production environment name. [PROD_STAGE]</li>
-				</ul>
-				<hr>
-				<h3 id="string-utility-functions">String Utility Functions</h3>
-				<p>Basic usage:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { contains, startWith, endsWith } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
-
-<span class="hljs-keyword">if</span> (contains(<span class="hljs-string">'Check This'</span>, <span class="hljs-string">'This'</span>)) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Yes, it contains it.'</span>);
-}
-<span class="hljs-keyword">if</span> (startsWith(<span class="hljs-string">'x-forward'</span>, <span class="hljs-string">'x-'</span>)) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'A custom header.'</span>);
-}
-<span class="hljs-keyword">if</span> (endsWith(<span class="hljs-string">'x-Forward-Cookies'</span>, <span class="hljs-string">'cookies'</span>, <span class="hljs-literal">true</span>)) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Case insensitivity FTW.'</span>);
-}</code></pre>
-				<h4 id="functions">FUNCTIONS</h4>
-				<ul>
-					<li><code>contains(value: string, searchTerm: string, caseInsensitive?: boolean): boolean</code> - Returns <code>true</code> if the <code>value</code> contains the <code>searchTerm</code>. By default, this function is case sensitive.</li>
-					<li><code>startsWith(value: string, searchTerm: string, caseInsensitive?: boolean): boolean</code> - Returns <code>true</code> if the <code>value</code> starts with the <code>searchTerm</code>. By default, this function is case sensitive.</li>
-					<li><code>endsWith(value: string, searchTerm: string, caseInsensitive?: boolean): boolean</code> - Returns <code>true</code> if the <code>value</code> ends with the <code>searchTerm</code>. By default, this function is case sensitive.</li>
-				</ul>
-				<hr>
-				<h3 id="time">Time</h3>
-				<p>Basic usage:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { TimeUnit, TZUtils } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
-
-<span class="hljs-keyword">const</span> oneDayInSeconds = TimeUnit.days(<span class="hljs-number">1</span>).toSeconds();
-<span class="hljs-keyword">const</span> fiveMinutesInMillis = TimeUnit.minutes(<span class="hljs-number">5</span>).toMillis();
-
-<span class="hljs-built_in">console</span>.log(TZUtils.timestamp());
-<span class="hljs-comment">// 2018-10-06 15:22:12,345 (This is UTC)</span>
-
-TZUtils.timezoneOffset = TimeUnit.hours(<span class="hljs-number">-5</span>).toMinutes();
-<span class="hljs-built_in">console</span>.log(TZUtils.timestamp());
-<span class="hljs-comment">// 2018-10-06 10:22:12,345 (Now we get the time in Ecuador, UTC-5)</span>
-
-<span class="hljs-keyword">const</span> localizedDate = TZUtils.now();
-<span class="hljs-comment">// localizedDate is the current date/time based on the timezoneOffset, Ecuador in this case.</span></code></pre>
-				<h4 id="timeunit"><code>TimeUnit</code></h4>
-				<h5 id="methods">METHODS</h5>
-				<ul>
-					<li><code>days(count: number): TimeUnit</code> - Returns a <code>TimeUnit</code> representing the specified number of days.</li>
-					<li><code>hourse(count: number): TimeUnit</code> - Returns a <code>TimeUnit</code> representing the specified number of hours.</li>
-					<li><code>minutes(count: number): TimeUnit</code> - Returns a <code>TimeUnit</code> representing the specified number of minutes.</li>
-					<li><code>seconds(count: number): TimeUnit</code> - Returns a <code>TimeUnit</code> representing the specified number of seconds.</li>
-					<li><code>millis(count: number): TimeUnit</code> - Returns a <code>TimeUnit</code> representing the specified number of milliseconds.</li>
-					<li><code>toDays(): number</code> - Returns the number of days, rounded to the greatest integer less than or equal to, the <code>TimeUnit</code> instance.</li>
-					<li><code>toHours(): number</code> - Returns the number of hours, rounded to the greatest integer less than or equal to, the <code>TimeUnit</code> instance.</li>
-					<li><code>toMinutes(): number</code> - Returns the number of minutes, rounded to the greatest integer less than or equal to, the <code>TimeUnit</code> instance.</li>
-					<li><code>toSeconds(): number</code> - Returns the number of seconds, rounded to the greatest integer less than or equal to, the <code>TimeUnit</code> instance.</li>
-					<li><code>toMillis(): number</code> - Returns the number of milliseconds, rounded to the greatest integer less than or equal to, the <code>TimeUnit</code> instance.</li>
-				</ul>
-				<h4 id="tzutils"><code>TZUtils</code></h4>
-				<h5 id="methods">METHODS</h5>
-				<ul>
-					<li><code>timestamp(format?: string): string</code> - Returns the current timestamp as a string. The actual value depends on both the <code>timezoneOffset</code> and the optionally provided <code>format</code>.<ul>
-							<li>Please see the <a href="https://date-fns.org/v1.29.0/docs/format">date-fns project</a> for details about the valid values for the format string.</li>
-						</ul>
-					</li>
-				</ul>
-				<h5 id="properties">PROPERTIES</h5>
-				<ul>
-					<li><code>ENV_OFFSET</code> - <em>(readonly)</em> Name of value read from <code>Config</code> to determine initial timezone if present. [UTC_OFFSET]</li>
-					<li><code>DEFAULT_OFFSET</code>- <em>(readonly)</em> The default timezone offset if <code>UTX_OFFSET</code> is not set in <code>Config</code>. [0]</li>
-					<li><code>FORMAT_TIMESTAMP</code> - <em>(readonly)</em> The default format used when calling <code>timestamp()</code>. [YYYY-MM-DD HH:mm:ss,SSS]</li>
-					<li><code>now</code> - <em>(readonly)</em> A <code>Date</code> object representing the date/time at the current <code>timezoneOffset</code>.</li>
-					<li><code>timezoneOffset</code> - The current offset <strong><em>in minutes</em></strong> from UTC. May be positive or negative.</li>
-				</ul>
-				<hr>
-				<h3 id="logging">Logging</h3>
-				<p>The purpose of the Logging feature is to provide a simple, easy to use method for logging, both on the server and client side.</p>
-				<p>Basic usage:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { LoggerFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
-
-<span class="hljs-keyword">const</span> LOG = LoggerFactory.getLogger();
-LOG.info(<span class="hljs-string">'Hey, here is a log message.'</span>);
-LOG.debug(<span class="hljs-string">'Examine this object: %j'</span>, someObj);</code></pre>
-				<h4 id="loggerfactory"><code>LoggerFactory</code></h4>
-				<h5 id="methods">METHODS</h5>
-				<ul>
-					<li><code>getLogger(loggerName?: string): Logger</code> - By default this will return the default <code>Logger</code>. If a name is passed as an argument, a <code>Logger</code> with that name will be created, or, if one already exists, it will be returned.</li>
-					<li><code>logEnabledLevels(logger: Logger): void</code> - This will print an entry in the logs for every log <code>Level</code> that is enabled for the specified <code>Logger</code>.</li>
-				</ul>
-				<h5 id="properties">PROPERTIES</h5>
-				<ul>
-					<li><code>ENV_LOGGING_LEVEL</code> - <em>(readonly)</em> Name of value read from <code>Config</code> to determine initial default <code>Level</code>. [LOGGING_LEVEL]</li>
-					<li><code>ENV_LOGGING_LEVEL_PREFIX</code>- <em>(readonly)</em> Prefix for any <code>Config</code> based <code>Level</code> used for a specific <code>Logger</code>. [LOGGING_LEVEL_]</li>
-					<li><code>DEFAULT_LOGGER</code> - <em>(readonly)</em> Name of the default <code>Logger</code>. [DEFAULT]</li>
-					<li><code>DEFAULT_LOGGING_LEVEL</code> - <em>(readonly)</em> The default logging <code>Level</code>. [ERROR]</li>
-					<li><code>GLOBAL_LEVEL</code> - The <code>Level</code> used by all <code>Logger</code>s that do not have one set explicitly.</li>
-					<li><code>GLOBAL_APPENDER</code> - The <code>Appender</code> used by all <code>Logger</code>s that do not have one set explicitly.</li>
-				</ul>
-				<hr>
-				<h3 id="http">Http</h3>
-				<p><em>Documentation Coming Soon!</em></p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/config.html" class="tsd-kind-icon">Config</a></li>
+								<li class="tsd-kind-class"><a href="classes/consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a></li>
+								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a></li>
+								<li class="tsd-kind-class"><a href="classes/env.html" class="tsd-kind-icon">Env</a></li>
+								<li class="tsd-kind-class"><a href="classes/level.html" class="tsd-kind-icon">Level</a></li>
+								<li class="tsd-kind-class"><a href="classes/loggerfactory.html" class="tsd-kind-icon">Logger<wbr>Factory</a></li>
+								<li class="tsd-kind-class"><a href="classes/loggingevent.html" class="tsd-kind-icon">Logging<wbr>Event</a></li>
+								<li class="tsd-kind-class"><a href="classes/observerutils.html" class="tsd-kind-icon">Observer<wbr>Utils</a></li>
+								<li class="tsd-kind-class"><a href="classes/simplelayout.html" class="tsd-kind-icon">Simple<wbr>Layout</a></li>
+								<li class="tsd-kind-class"><a href="classes/tzutils.html" class="tsd-kind-icon">TZUtils</a></li>
+								<li class="tsd-kind-class"><a href="classes/timeunit.html" class="tsd-kind-icon">Time<wbr>Unit</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/appender.html" class="tsd-kind-icon">Appender</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/layout.html" class="tsd-kind-icon">Layout</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/logger.html" class="tsd-kind-icon">Logger</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#contains" class="tsd-kind-icon">contains</a></li>
+								<li class="tsd-kind-function"><a href="index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a></li>
+								<li class="tsd-kind-function"><a href="index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a></li>
+								<li class="tsd-kind-function"><a href="index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a></li>
+								<li class="tsd-kind-function"><a href="index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a></li>
+								<li class="tsd-kind-function"><a href="index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a></li>
+								<li class="tsd-kind-function"><a href="index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a></li>
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="contains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> contains</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">contains<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, searchTerm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, caseInsensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/StringUtils.ts#L9">StringUtils.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the <code>value</code> contains the <code>searchTerm</code>. By default, this function is case sensitive.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The value to be searched.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>searchTerm: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The value to be searched for.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> caseInsensitive: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Value indicating if the match should be case sensitive.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="endswith" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> ends<wbr>With</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">ends<wbr>With<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, searchTerm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, caseInsensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/StringUtils.ts#L41">StringUtils.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the <code>value</code> ends with the <code>searchTerm</code>. By default, this function is case sensitive.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The value to be searched.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>searchTerm: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The suffix to be searched for.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> caseInsensitive: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Value indicating if the match should be case sensitive.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isresponseok" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Response<wbr>Ok</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Response<wbr>Ok<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L3">Http/HttpUtils.ts:3</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">IncomingMessage</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="mergeheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> merge<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">merge<wbr>Headers<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span>, src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span>, overwrite<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L18">Http/HttpUtils.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+								</li>
+								<li>
+									<h5>src: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> overwrite: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IncomingHttpHeaders</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="startswith" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> starts<wbr>With</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">starts<wbr>With<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, searchTerm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, caseInsensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/StringUtils.ts#L25">StringUtils.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the <code>value</code> starts with the <code>searchTerm</code>. By default, this function is case sensitive.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The value to be searched.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>searchTerm: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The prefix to be searched for.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> caseInsensitive: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Value indicating if the match should be case sensitive.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="tobodytext" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> to<wbr>Body<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Body<wbr>Text<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L7">Http/HttpUtils.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">IncomingMessage</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="toincominghttpheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> to<wbr>Incoming<wbr>Http<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers<span class="tsd-signature-symbol">(</span>headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L32">Http/HttpUtils.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>headers: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IncomingHttpHeaders</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="tonormalizedheadervalue" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> to<wbr>Normalized<wbr>Header<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L40">Http/HttpUtils.ts:40</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_config_.html">"<wbr>Config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_env_.html">"<wbr>Env"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_http_httputils_.html">"<wbr>Http/<wbr>Http<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_http_index_.html">"<wbr>Http/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_appender_.html">"<wbr>Logging/<wbr>Appender"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_consoleappender_.html">"<wbr>Logging/<wbr>Console<wbr>Appender"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_layout_.html">"<wbr>Logging/<wbr>Layout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_level_.html">"<wbr>Logging/<wbr>Level"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_logger_.html">"<wbr>Logging/<wbr>Logger"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_loggerfactory_.html">"<wbr>Logging/<wbr>Logger<wbr>Factory"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_loggingevent_.html">"<wbr>Logging/<wbr>Logging<wbr>Event"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_simplelayout_.html">"<wbr>Logging/<wbr>Simple<wbr>Layout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_logging_index_.html">"<wbr>Logging/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_observerutils_.html">"<wbr>Observer<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_stringutils_.html">"<wbr>String<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_time_tzutils_.html">"<wbr>Time/TZUtils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_time_timeunit_.html">"<wbr>Time/<wbr>Time<wbr>Unit"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_time_index_.html">"<wbr>Time/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
+					<li class="globals current ">
+						<a href="index.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/config.html" class="tsd-kind-icon">Config</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/env.html" class="tsd-kind-icon">Env</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/level.html" class="tsd-kind-icon">Level</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/loggerfactory.html" class="tsd-kind-icon">Logger<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/loggingevent.html" class="tsd-kind-icon">Logging<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/observerutils.html" class="tsd-kind-icon">Observer<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/simplelayout.html" class="tsd-kind-icon">Simple<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/tzutils.html" class="tsd-kind-icon">TZUtils</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/timeunit.html" class="tsd-kind-icon">Time<wbr>Unit</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/appender.html" class="tsd-kind-icon">Appender</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/layout.html" class="tsd-kind-icon">Layout</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#contains" class="tsd-kind-icon">contains</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
