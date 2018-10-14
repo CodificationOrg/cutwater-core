@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LoggerFactory | CutWater: Core</title>
+	<title>LoggerFactory | CutWater:Core API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">CutWater: Core</a>
+					<a href="../index.html" class="title">CutWater:Core API Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="loggerfactory.html">LoggerFactory</a>
@@ -66,6 +66,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The source and single point of management for <a href="../interfaces/logger.html">Logger</a> instances.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -104,32 +111,59 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_logger" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>LOGGER</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>LOGGER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"DEFAULT"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;DEFAULT&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>LOGGER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;DEFAULT&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L14">Logging/LoggerFactory.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L34">Logging/LoggerFactory.ts:34</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the default <a href="../interfaces/logger.html">Logger</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_logging_level" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>LOGGING_<wbr>LEVEL</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>LOGGING_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;ERROR&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>LOGGING_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;ERROR&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L15">Logging/LoggerFactory.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L40">Logging/LoggerFactory.ts:40</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="level.html">Level</a> used if a default is not found under the <code>LOGGING_LEVEL</code> key in <a href="config.html">Config</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="env_logging_level" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> ENV_<wbr>LOGGING_<wbr>LEVEL</h3>
-					<div class="tsd-signature tsd-kind-icon">ENV_<wbr>LOGGING_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"LOGGING_LEVEL"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;LOGGING_LEVEL&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ENV_<wbr>LOGGING_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;LOGGING_LEVEL&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L11">Logging/LoggerFactory.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L19">Logging/LoggerFactory.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <code>key</code> in <a href="config.html">Config</a> that will be checked for a default logging level.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="env_logging_level_prefix" class="tsd-anchor"></a>
@@ -137,9 +171,19 @@
 					<div class="tsd-signature tsd-kind-icon">ENV_<wbr>LOGGING_<wbr>LEVEL_<wbr>PREFIX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;LoggerFactory.ENV_LOGGING_LEVEL + &#x27;_&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L12">Logging/LoggerFactory.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L27">Logging/LoggerFactory.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The prefix for the <code>key</code> in <a href="config.html">Config</a> that will be used to determine the logging level for
+							<a href="../interfaces/logger.html">Logger</a> instances with the name following the prefix.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="global_appender" class="tsd-anchor"></a>
@@ -147,9 +191,14 @@
 					<div class="tsd-signature tsd-kind-icon">GLOBAL_<wbr>APPENDER<span class="tsd-signature-symbol">:</span> <a href="../interfaces/appender.html" class="tsd-signature-type">Appender</a><span class="tsd-signature-symbol"> =&nbsp;new ConsoleAppender()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L18">Logging/LoggerFactory.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L49">Logging/LoggerFactory.ts:49</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="../interfaces/appender.html">Appender</a> used by all <a href="../interfaces/logger.html">Logger</a> instances that do not have one specified.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="global_level" class="tsd-anchor"></a>
@@ -157,9 +206,14 @@
 					<div class="tsd-signature tsd-kind-icon">GLOBAL_<wbr>LEVEL<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L17">Logging/LoggerFactory.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L45">Logging/LoggerFactory.ts:45</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="level.html">Level</a> used by all <a href="../interfaces/logger.html">Logger</a> instances that do not have one specified.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -174,13 +228,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L20">Logging/LoggerFactory.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L57">Logging/LoggerFactory.ts:57</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the <a href="../interfaces/logger.html">Logger</a> instance with the specified name.  If no name is provided, the default will be returned.
+									If a logger does not exist with the specified name, a new one will be created.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> loggerName: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;this.DEFAULT_LOGGER</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Name of the logger instance to be returned.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></h4>
@@ -197,13 +260,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L32">Logging/LoggerFactory.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/LoggerFactory.ts#L74">Logging/LoggerFactory.ts:74</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Causes the specified <a href="../interfaces/logger.html">Logger</a> to append a single message for each enabled <a href="level.html">Level</a>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>logger: <a href="../interfaces/logger.html" class="tsd-signature-type">Logger</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The logger to output levels for.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -216,7 +287,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
@@ -227,9 +298,6 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
-					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="env.html" class="tsd-kind-icon">Env</a>
@@ -295,28 +363,25 @@
 						<a href="../interfaces/logger.html" class="tsd-kind-icon">Logger</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#contains" class="tsd-kind-icon">contains</a>
+						<a href="../globals.html#contains" class="tsd-kind-icon">contains</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
+						<a href="../globals.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
+						<a href="../globals.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
+						<a href="../globals.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
+						<a href="../globals.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
+						<a href="../globals.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a>
+						<a href="../globals.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
 					</li>
 				</ul>
 			</nav>

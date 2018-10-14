@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Logger | CutWater: Core</title>
+	<title>Logger | CutWater:Core API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">CutWater: Core</a>
+					<a href="../index.html" class="title">CutWater:Core API Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="logger.html">Logger</a>
@@ -66,18 +66,19 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A <a href="logger.html">Logger</a> is used to log messages for a specific system or application component.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">Logger</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implemented by</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../classes/defaultloggerimpl.html" class="tsd-signature-type">DefaultLoggerImpl</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -116,9 +117,14 @@
 					<div class="tsd-signature tsd-kind-icon">appender<span class="tsd-signature-symbol">:</span> <a href="appender.html" class="tsd-signature-type">Appender</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L7">Logging/Logger.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L21">Logging/Logger.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The destination for messages this logger receives.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="level" class="tsd-anchor"></a>
@@ -126,9 +132,14 @@
 					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <a href="../classes/level.html" class="tsd-signature-type">Level</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L6">Logging/Logger.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L16">Logging/Logger.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The level at which this logger will output messages.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -136,9 +147,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L5">Logging/Logger.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L11">Logging/Logger.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The human readable name of this logger instance.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -153,13 +169,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L13">Logging/Logger.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L63">Logging/Logger.ts:63</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of debug priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -176,13 +200,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L10">Logging/Logger.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L42">Logging/Logger.ts:42</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of error priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -199,13 +231,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L9">Logging/Logger.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L35">Logging/Logger.ts:35</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of fatal priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -222,13 +262,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L12">Logging/Logger.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L56">Logging/Logger.ts:56</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of info priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -239,19 +287,27 @@
 					<a name="isenabled" class="tsd-anchor"></a>
 					<h3>is<wbr>Enabled</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Enabled<span class="tsd-signature-symbol">(</span>Level<span class="tsd-signature-symbol">: </span><a href="../classes/level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Enabled<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><a href="../classes/level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L8">Logging/Logger.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L28">Logging/Logger.ts:28</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns if this logger will output messages at the specified level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>Level: <a href="../classes/level.html" class="tsd-signature-type">Level</a></h5>
+									<h5>level: <a href="../classes/level.html" class="tsd-signature-type">Level</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The level to check.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -268,13 +324,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L15">Logging/Logger.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L77">Logging/Logger.ts:77</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Supplied for compatibility with other logging systems.  Specific level varies by implementation.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -291,13 +355,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L14">Logging/Logger.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L70">Logging/Logger.ts:70</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of trace priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -314,13 +386,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L11">Logging/Logger.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Logger.ts#L49">Logging/Logger.ts:49</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../classes/loggingevent.html">LoggingEvent</a> of warn priority, returning <code>true</code> if the message will be output based on this logger&#39;s level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>input: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data describing the logging event.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -333,7 +413,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
@@ -344,9 +424,6 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="../classes/consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
-					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="../classes/defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="../classes/env.html" class="tsd-kind-icon">Env</a>
@@ -421,28 +498,25 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-function">
-						<a href="../index.html#contains" class="tsd-kind-icon">contains</a>
+						<a href="../globals.html#contains" class="tsd-kind-icon">contains</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
+						<a href="../globals.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
+						<a href="../globals.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
+						<a href="../globals.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
+						<a href="../globals.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
+						<a href="../globals.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a>
+						<a href="../globals.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
 					</li>
 				</ul>
 			</nav>

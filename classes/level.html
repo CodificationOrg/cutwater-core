@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Level | CutWater: Core</title>
+	<title>Level | CutWater:Core API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">CutWater: Core</a>
+					<a href="../index.html" class="title">CutWater:Core API Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="level.html">Level</a>
@@ -66,6 +66,15 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Defines a set of standard logging levels that can be used to control logging output.
+							The logging Level objects are ordered and are specified by ordered integers. Enabling logging at a given
+						level also enables logging at all higher levels.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -117,9 +126,18 @@
 					<div class="tsd-signature tsd-kind-icon">ALL<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;ALL&#x27;, 7)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L9">Logging/Level.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L46">Logging/Level.ts:46</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating that ALL messages will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="debug" class="tsd-anchor"></a>
@@ -127,9 +145,18 @@
 					<div class="tsd-signature tsd-kind-icon">DEBUG<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;DEBUG&#x27;, 5)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L7">Logging/Level.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L36">Logging/Level.ts:36</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating only debug messages or worse will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="error" class="tsd-anchor"></a>
@@ -137,9 +164,18 @@
 					<div class="tsd-signature tsd-kind-icon">ERROR<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;ERROR&#x27;, 2)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L4">Logging/Level.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L21">Logging/Level.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating only error messages or worse will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="fatal" class="tsd-anchor"></a>
@@ -147,9 +183,18 @@
 					<div class="tsd-signature tsd-kind-icon">FATAL<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;FATAL&#x27;, 1)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L3">Logging/Level.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L16">Logging/Level.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating only fatal messages will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="info" class="tsd-anchor"></a>
@@ -157,9 +202,18 @@
 					<div class="tsd-signature tsd-kind-icon">INFO<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;INFO&#x27;, 4)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L6">Logging/Level.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L31">Logging/Level.ts:31</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating only info messages or worse will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="levels" class="tsd-anchor"></a>
@@ -167,9 +221,18 @@
 					<div class="tsd-signature tsd-kind-icon">LEVELS<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[Level.FATAL, Level.ERROR, Level.WARN, Level.INFO, Level.DEBUG, Level.TRACE]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L11">Logging/Level.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L52">Logging/Level.ts:52</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array containing all <a href="level.html">Level</a>s.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="off" class="tsd-anchor"></a>
@@ -177,9 +240,18 @@
 					<div class="tsd-signature tsd-kind-icon">OFF<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;OFF&#x27;, 0)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L2">Logging/Level.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L11">Logging/Level.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level inidicating all logging is disabled.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="trace" class="tsd-anchor"></a>
@@ -187,9 +259,18 @@
 					<div class="tsd-signature tsd-kind-icon">TRACE<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;TRACE&#x27;, 6)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L8">Logging/Level.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L41">Logging/Level.ts:41</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating trace messages or worse will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="warn" class="tsd-anchor"></a>
@@ -197,9 +278,18 @@
 					<div class="tsd-signature tsd-kind-icon">WARN<span class="tsd-signature-symbol">:</span> <a href="level.html" class="tsd-signature-type">Level</a><span class="tsd-signature-symbol"> =&nbsp;new Level(&#x27;WARN&#x27;, 3)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L5">Logging/Level.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L26">Logging/Level.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Level indicating only warning messages or worse will be output.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>readonly</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -214,9 +304,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L33">Logging/Level.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L84">Logging/Level.ts:84</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Human readable name of this <a href="level.html">Level</a>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>readonly</dt>
+									<dd></dd>
+								</dl>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -231,9 +330,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L37">Logging/Level.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L93">Logging/Level.ts:93</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The numeric priority of this <a href="level.html">Level</a>.  Higher values indicate a higher level of detail.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>readonly</dt>
+									<dd></dd>
+								</dl>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
@@ -251,13 +359,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L41">Logging/Level.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L103">Logging/Level.ts:103</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if this <a href="level.html">Level</a> is greater or equal to the priority of the supplied level.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>level: <a href="level.html" class="tsd-signature-type">Level</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The level to be compared.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -274,13 +390,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L13">Logging/Level.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/Level.ts#L59">Logging/Level.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a <a href="level.html">Level</a> object representing the <code>string</code> or <code>number</code> speicified.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>level: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value corresponding to a <a href="level.html">Level</a>.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="level.html" class="tsd-signature-type">Level</a></h4>
@@ -293,7 +417,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
@@ -304,9 +428,6 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
-					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="defaultloggerimpl.html" class="tsd-kind-icon">Default<wbr>Logger<wbr>Impl</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="env.html" class="tsd-kind-icon">Env</a>
@@ -387,28 +508,25 @@
 						<a href="../interfaces/logger.html" class="tsd-kind-icon">Logger</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#contains" class="tsd-kind-icon">contains</a>
+						<a href="../globals.html#contains" class="tsd-kind-icon">contains</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
+						<a href="../globals.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
+						<a href="../globals.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
+						<a href="../globals.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
+						<a href="../globals.html#startswith" class="tsd-kind-icon">starts<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
+						<a href="../globals.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../index.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="../index.html#tonormalizedheadervalue" class="tsd-kind-icon">to<wbr>Normalized<wbr>Header<wbr>Value</a>
+						<a href="../globals.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
 					</li>
 				</ul>
 			</nav>
