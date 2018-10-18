@@ -67,11 +67,13 @@
 				<h1 id="cutwater-core">Cutwater:Core</h1>
 				<p><a href="https://circleci.com/gh/CodificationOrg/cutwater-core"><img src="https://img.shields.io/circleci/project/github/CodificationOrg/cutwater-core.svg" alt="CircleCI"></a>
 				<a href="https://www.npmjs.com/package/cutwater-core"><img src="https://img.shields.io/npm/v/cutwater-core.svg" alt="NPM"></a></p>
-				<p>A library providing the functionality that we always seem to need in every project Typescript/Javascript project.</p>
+				<p>A library providing the functionality that we always seem to need in every Typescript/Javascript project.</p>
 				<h2 id="installation">Installation</h2>
 				<p>Via npm:</p>
-				<pre><code>npm <span class="hljs-keyword">install</span> cutwater-core</code></pre><p>Via yarn:</p>
-				<pre><code>yarn <span class="hljs-keyword">add</span><span class="bash"> cutwater-core</span></code></pre><h2 id="api-documentation">API Documentation</h2>
+				<pre><code class="language-bash">npm install cutwater-core</code></pre>
+				<p>Via yarn:</p>
+				<pre><code class="language-bash">yarn add cutwater-core</code></pre>
+				<h2 id="api-documentation">API Documentation</h2>
 				<p>Detailed API documentation can be found <a href="https://codificationorg.github.io/cutwater-core/index.html">here</a>.</p>
 				<h2 id="quick-start-guide">Quick Start Guide</h2>
 				<h3 id="configuration">Configuration</h3>
@@ -92,7 +94,7 @@ Config.put(<span class="hljs-string">'BACKUP_API_URL'</span>, <span class="hljs-
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Yeah, we made it to production!'</span>);
 }
 <span class="hljs-keyword">if</span> (Env.isDev()) {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'No yet I guess.'</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Not yet I guess.'</span>);
 }</code></pre>
 				<hr>
 				<h3 id="string-utility-functions">String Utility Functions</h3>
@@ -132,7 +134,25 @@ LOG.info(<span class="hljs-string">'Hey, here is a log message.'</span>);
 LOG.debug(<span class="hljs-string">'Examine this object: %j'</span>, someObj);</code></pre>
 				<hr>
 				<h3 id="http">Http</h3>
-				<p><em>Documentation Coming Soon!</em></p>
+				<p><strong>Note:</strong> The <code>http</code> related functions are designed to simplify aspects of working with the <a href="https://nodejs.org/api/http.html">http module in Node.js</a></p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isResponseOk, LoggerFactory, mergeHeaders, toBodyText } <span class="hljs-keyword">from</span> <span class="hljs-string">'cutwater-core'</span>;
+
+<span class="hljs-keyword">const</span> LOG = LoggerFactory.getLogger();
+<span class="hljs-keyword">const</span> response = magicalHttpRequestFunction();
+<span class="hljs-keyword">if</span>(isResponseOk(response)){
+  toBodyText(response).then(
+    <span class="hljs-function"><span class="hljs-params">bodyTxt</span> =&gt;</span> {
+      LOG.info(<span class="hljs-string">'The body text was: %s'</span>, bodyTxt);
+    }
+  ).catch(
+    <span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+      LOG.error(<span class="hljs-string">'Oops! Problem reading the body: %j'</span>,err);
+    }
+  )
+
+  <span class="hljs-keyword">const</span> nextRequestHeaders = mergeHeaders(response.headers,{<span class="hljs-string">'x-custom-header'</span>:<span class="hljs-string">'Custom Value'</span>},<span class="hljs-literal">true</span>);
+  <span class="hljs-comment">// Will add the 'x-custom-header' to the received headers, or overwrite if it already exists.</span>
+}</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
