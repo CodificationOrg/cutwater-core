@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ConsoleAppender | CutWater:Core API Documentation</title>
+	<title>HttpUtils | CutWater:Core API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,35 +56,22 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="consoleappender.html">ConsoleAppender</a>
+					<a href="httputils.html">HttpUtils</a>
 				</li>
 			</ul>
-			<h1>Class ConsoleAppender</h1>
+			<h1>Class HttpUtils</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The default <a href="../interfaces/appender.html">Appender</a> implementation that writes all <a href="loggingevent.html">LoggingEvent</a>s to <code>console.log()</code>.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ConsoleAppender</span>
+						<span class="target">HttpUtils</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/appender.html" class="tsd-signature-type">Appender</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -92,131 +79,153 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="consoleappender.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="consoleappender.html#layout" class="tsd-kind-icon">layout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="consoleappender.html#name" class="tsd-kind-icon">name</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="consoleappender.html#doappend" class="tsd-kind-icon">do<wbr>Append</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="httputils.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="httputils.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="httputils.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="httputils.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a></li>
 							</ul>
 						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Console<wbr>Appender<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, layout<span class="tsd-signature-symbol">?: </span><a href="../interfaces/layout.html" class="tsd-signature-type">Layout</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="consoleappender.html" class="tsd-signature-type">ConsoleAppender</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/ConsoleAppender.ts#L19">Logging/ConsoleAppender.ts:19</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates a new <code>console</code> based <a href="../interfaces/appender.html">Appender</a>.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;console&quot;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>The name of this appender.</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> layout: <a href="../interfaces/layout.html" class="tsd-signature-type">Layout</a><span class="tsd-signature-symbol"> =&nbsp;new SimpleLayout()</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>The layout to use for received logging events.</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="consoleappender.html" class="tsd-signature-type">ConsoleAppender</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="layout" class="tsd-anchor"></a>
-					<h3>layout</h3>
-					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="../interfaces/layout.html" class="tsd-signature-type">Layout</a></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/appender.html">Appender</a>.<a href="../interfaces/appender.html#layout">layout</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/ConsoleAppender.ts#L19">Logging/ConsoleAppender.ts:19</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>readonly</dt>
-							<dd></dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/appender.html">Appender</a>.<a href="../interfaces/appender.html#name">name</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/ConsoleAppender.ts#L14">Logging/ConsoleAppender.ts:14</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>readonly</dt>
-							<dd></dd>
-						</dl>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="doappend" class="tsd-anchor"></a>
-					<h3>do<wbr>Append</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">do<wbr>Append<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="loggingevent.html" class="tsd-signature-type">LoggingEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="isresponseok" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Response<wbr>Ok</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Response<wbr>Ok<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/appender.html">Appender</a>.<a href="../interfaces/appender.html#doappend">doAppend</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Logging/ConsoleAppender.ts#L32">Logging/ConsoleAppender.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L9">Http/HttpUtils.ts:9</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the response status is between 200 and 399 inclusive.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>event: <a href="loggingevent.html" class="tsd-signature-type">LoggingEvent</a></h5>
+									<h5>response: <span class="tsd-signature-type">IncomingMessage</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Response from the Node.js <code>http</code> module.</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="mergeheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> merge<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">merge<wbr>Headers<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span>, src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span>, overwrite<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L37">Http/HttpUtils.ts:37</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the result of merging the <code>src</code> headers into the initial <code>dst</code> headers.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The initial set of headers.</p>
+									</div>
+								</li>
+								<li>
+									<h5>src: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The headers to be merged into the <code>dst</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> overwrite: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code>, headers in the <code>src</code> will overwrite existing headers in the <code>dst</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IncomingHttpHeaders</span></h4>
+							<p>A new object containing the results of the merge.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="tobodytext" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Body<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Body<wbr>Text<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L18">Http/HttpUtils.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a <code>Promise</code> that resolves to the text data contained in the response body.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">IncomingMessage</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Response from the Node.js <code>http</code> module.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="toincominghttpheaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Incoming<wbr>Http<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers<span class="tsd-signature-symbol">(</span>headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingHttpHeaders</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/CodificationOrg/cutwater-core/blob/master/src/Http/HttpUtils.ts#L56">Http/HttpUtils.ts:56</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts a set of headers, either incoming or outgoing, to the incoming format used by the <code>http</code> module in Node.js.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>headers: <span class="tsd-signature-type">IncomingHttpHeaders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Headers to be converted to the incoming format.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IncomingHttpHeaders</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -235,33 +244,33 @@
 					<li class=" tsd-kind-class">
 						<a href="config.html" class="tsd-kind-icon">Config</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="env.html" class="tsd-kind-icon">Env</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="consoleappender.html" class="tsd-kind-icon">Console<wbr>Appender</a>
+						<a href="httputils.html" class="tsd-kind-icon">Http<wbr>Utils</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="consoleappender.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="httputils.html#isresponseok" class="tsd-kind-icon">is<wbr>Response<wbr>Ok</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="consoleappender.html#layout" class="tsd-kind-icon">layout</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="httputils.html#mergeheaders" class="tsd-kind-icon">merge<wbr>Headers</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="consoleappender.html#name" class="tsd-kind-icon">name</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="httputils.html#tobodytext" class="tsd-kind-icon">to<wbr>Body<wbr>Text</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="consoleappender.html#doappend" class="tsd-kind-icon">do<wbr>Append</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="httputils.html#toincominghttpheaders" class="tsd-kind-icon">to<wbr>Incoming<wbr>Http<wbr>Headers</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="env.html" class="tsd-kind-icon">Env</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="httputils.html" class="tsd-kind-icon">Http<wbr>Utils</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="level.html" class="tsd-kind-icon">Level</a>
 					</li>
