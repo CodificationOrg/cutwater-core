@@ -23,8 +23,8 @@
     "build:umd": "webpack --mode=production",
     "release:before": "npm run validate && git add -A .",
     "release:after": "git push origin --tags",
-    "release:dev": "npm release:before && standard-version -a --prerelease beta && npm run release:after",
-    "release:prod": "npm release:before && standard-version -a && npm run release:after && npm run publish:docs",
+    "release:dev": "npm run release:before && standard-version -a --prerelease beta && npm run release:after",
+    "release:prod": "npm run release:before && standard-version -a && npm run release:after && npm run publish:docs",
     "release:dry": "npm run validate && standard-version -a --dry-run --prerelease beta"
   },
   "repository": {
